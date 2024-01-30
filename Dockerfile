@@ -52,6 +52,12 @@ RUN apt install -y -o Dpkg::Options::="--force-overwrite" \
 
 RUN rm -rf /opt/nvidia/l4t-packages
 
+#install ROS
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN apt-get install -y curl
+RUN curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+RUN apt-get install ros-noetic-desktop-full
+
 COPY root/ /
 
 RUN useradd -ms /bin/bash jetson
