@@ -52,6 +52,10 @@ RUN apt install -y -o Dpkg::Options::="--force-overwrite" \
 
 RUN rm -rf /opt/nvidia/l4t-packages
 
+#useful stuff
+RUN apt-get install -y vim
+RUN apt-get install -y iputils-ping
+
 #install ROS
 # install packages
 RUN apt-get update && apt-get install -q -y --no-install-recommends \
