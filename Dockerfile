@@ -58,7 +58,7 @@ RUN apt-get install -y vim \
     usbutils \
     build-essential  \
     git \
-    dkms \
+    dkms 
 
 # wifi drivers
 
