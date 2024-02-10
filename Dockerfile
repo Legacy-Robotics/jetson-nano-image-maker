@@ -52,9 +52,15 @@ RUN apt install -y -o Dpkg::Options::="--force-overwrite" \
 
 RUN rm -rf /opt/nvidia/l4t-packages
 
-#useful stuff
-RUN apt-get install -y vim
-RUN apt-get install -y iputils-ping
+# useful stuff
+RUN apt-get install -y vim \
+    iputils-ping \
+    usbutils \
+    build-essential  \
+    git \
+    dkms \
+
+# wifi drivers
 
 COPY root/ /
 
