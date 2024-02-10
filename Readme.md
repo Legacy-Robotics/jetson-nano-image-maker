@@ -2,6 +2,12 @@
 
 > **tl;dr;** Build sd-card flashable images for [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit) dev kits using Docker and Github Actions.
 
+## Legacy Modifications
+- Updated the Jetson L4T BSP to 32.7.4
+- Add wpa_supplicant
+- Add various tools to image such as vim and git
+- Add ROS packages
+
 ## Problem
 
 
