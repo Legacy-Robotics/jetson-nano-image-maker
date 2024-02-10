@@ -55,10 +55,7 @@ RUN rm -rf /opt/nvidia/l4t-packages
 # useful stuff
 RUN apt-get install -y vim \
     iputils-ping \
-    usbutils \
-    build-essential  \
-    git \
-    dkms 
+    git
 
 # wifi drivers
 
